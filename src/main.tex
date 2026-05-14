@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,left=24mm,right=24mm,top=26mm,bottom=26mm]{geometry}
+
+\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% =========================
+% Schriftarten
+% =========================
+
+\setmainfont[
+Ligatures=NoCommon
+]{Inter}
+
+\newfontfamily\headingfont[
+Ligatures=NoCommon
+]{Montserrat SemiBold}
+
+% =========================
+% Layout
+% =========================
+
+\pagenumbering{gobble}
+
+\setlist[itemize]{
+leftmargin=1.2em,
+itemsep=0.2em,
+topsep=0.2em
+}
+
+\titleformat{\section}
+{\headingfont\fontsize{15.5pt}{17pt}\selectfont}
+{}{0pt}{}
+
+% =========================
+% Dokument
+% =========================
+
+\begin{document}
+
+{\headingfont\fontsize{18pt}{20pt}\selectfont Vorname Nachname}
+
+\vspace{0.2cm}
+
+Stadt
+
+Telefon: 01234 567890
+
+E Mail: \href{mailto:max.mustermann@email.de}{max.mustermann@email.de}
+
+\vspace{0.9cm}
+
+% =========================
+% Profil
+% =========================
+
+\section*{Profil}
+
+Technischer Spezialist mit langjähriger Erfahrung in der Instandhaltung, Automatisierung und Analyse komplexer Industrieanlagen. Schwerpunkt auf Energiedatenanalyse, Gebäudeleittechnik, Messdatenerfassung sowie systematischer Störungsdiagnose. Umfangreiche Erfahrung in der Planung, Integration und Optimierung technischer Systeme sowie in der strukturierten Auswertung technischer Daten. Hohe Eigeninitiative und ausgeprägtes Interesse an modernen Energie, Automatisierungs und Monitoringlösungen.
+
+% =========================
+% Berufserfahrung
+% =========================
+
+\section*{Berufserfahrung}
+
+\textbf{Berufsbezeichnung}\\
+Unternehmensname, Standort\\
+2010 bis heute
+
+\begin{itemize}
+\item Analyse und nachhaltige Behebung komplexer Anlagenstörungen
+\item Sicherstellung hoher Anlagenverfügbarkeit durch systematisches und eigenverantwortliches Vorgehen
+\item Erfassung, Analyse und Interpretation von Energie und Betriebsdaten
+\item Entwicklung und Optimierung technischer Steuerungs und Überwachungslösungen
+\item Integration und Kopplung unterschiedlicher Bussysteme
+\item Mitwirkung an der Weiterentwicklung technischer Systeme
+\item Technische Dokumentation und strukturierte Datenaufbereitung
+\item Schulung von Mitarbeitenden und Wissenstransfer
+\item Technische Betreuung komplexer Produktionsanlagen
+\end{itemize}
+
+\vspace{0.4cm}
+
+\textbf{Vorherige Position}\\
+Unternehmensname, Standort\\
+2005 bis 2010
+
+\begin{itemize}
+\item Planung und Umsetzung technischer Projekte
+\item Fehleranalyse und Instandhaltung elektrischer Anlagen
+\item Unterstützung bei Automatisierungsprojekten
+\item Optimierung technischer Prozesse
+\end{itemize}
+
+% =========================
+% Projekte
+% =========================
+
+\section*{Ausgewählte Projekte}
+
+\textbf{Projektname}\\
+Kurze Beschreibung des Projekts, der technischen Verantwortung sowie des erzielten Ergebnisses.
+
+\vspace{0.45cm}
+
+\textbf{Projektname}\\
+Beschreibung der verwendeten Technologien, Systeme und Schnittstellen.
+
+\vspace{0.45cm}
+
+\textbf{Projektname}\\
+Beschreibung von Planung, Umsetzung, Inbetriebnahme und Dokumentation.
+
+\vspace{0.45cm}
+
+\textbf{Privatprojekt oder Eigeninitiative}\\
+Beschreibung eines eigenständig entwickelten technischen oder datenbasierten Projekts.
+
+% =========================
+% Kenntnisse
+% =========================
+
+\section*{Kenntnisse}
+
+\textbf{Technische Schwerpunkte}\\
+Automatisierung, Energiedatenanalyse, technische Systemintegration, Messdatenerfassung, Störungsdiagnose
+
+\vspace{0.35cm}
+
+\textbf{Systeme und Technologien}\\
+KNX, BACnet, Modbus, SPS, Sensorik, Steuerungstechnik
+
+\vspace{0.35cm}
+
+\textbf{Software}\\
+MS Office, Datenanalyse, Visualisierung, technische Dokumentation
+
+% =========================
+% Weiterbildung
+% =========================
+
+\section*{Weiterbildungen und Qualifikationen}
+
+Weiterbildungen im Bereich Gebäudeleittechnik, Energiedatenerfassung, Automatisierungstechnik, Messpraxis oder technischer Systemanalyse.
+
+% =========================
+% Ausbildung
+% =========================
+
+\section*{Ausbildung}
+
+\textbf{Ausbildungsbezeichnung oder Studium}\\
+Bildungseinrichtung\\
+2000 bis 2004
+
+Zusätzliche Informationen zu Projekten, Praxisphasen oder technischen Schwerpunkten.
+
+\end{document}

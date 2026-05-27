@@ -12,7 +12,12 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
-
+        
+      - name: Repository Inhalt anzeigen
+        run: |
+          pwd
+          find .
+          
       - name: CV kompilieren
         uses: xu-cheng/latex-action@v3
         with:

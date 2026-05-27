@@ -25,8 +25,8 @@ jobs:
           root_file: |
             src/cv.tex
             docs/document-comparison.tex
-          compiler: xelatex
-          args: -output-directory=build
+          compiler: latexmk
+          args: -xelatex -output-directory=build
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4

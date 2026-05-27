@@ -16,7 +16,7 @@ jobs:
       - name: CV kompilieren
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: src/cv.tex
+          root_file: src/main.tex
 
       - name: Vergleichsdokument kompilieren
         uses: xu-cheng/latex-action@v3

@@ -1,34 +1,32 @@
-name: Build PDFs
+name: Build LaTeX CV
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Repository auschecken
+      - name: Checkout repository
         uses: actions/checkout@v4
-          
-      - name: CV kompilieren
+
+      - name: Create build directory
+        run: mkdir -p build
+
+      - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: src/cv.tex
-          latexmk_use_xelatex: true
+          compiler: xelatex
           args: -output-directory=build
 
-      - name: Vergleichsdokument kompilieren
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: docs/document-comparison.tex
-          latexmk_use_xelatex: true
-          args: -output-directory=build 
-          
-      - name: PDFs hochladen
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: generated-pdfs
-          path: build/*.pdf
+          name: cv-pdf
+          path: build/cv.pdf
+

@@ -1,0 +1,39 @@
+name: Build PDFs
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Create build directory
+        run: mkdir -p build
+
+      - name: CV kompilieren
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: src/cv.tex
+          latexmk_use_xelatex: true
+
+      - name: Vergleichsdokument kompilieren
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: docs/latex-vs-office.tex
+          latexmk_use_xelatex: true
+
+      - name: PDFs hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-pdfs
+          path: |
+            build/*.pdf

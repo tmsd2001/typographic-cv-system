@@ -1,0 +1,28 @@
+name: Build CV PDF
+
+on:
+push:
+branches:
+- main
+
+jobs:
+build_latex:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Repository auschecken
+    uses: actions/checkout@v4
+
+  - name: LaTeX kompilieren
+    uses: xu-cheng/latex-action@v3
+    with:
+      root_file: src/cv.tex
+
+  - name: PDF Artefakt hochladen
+    uses: actions/upload-artifact@v4
+    with:
+      name: generated-pdf
+      path: src/cv.pdf
+```
+

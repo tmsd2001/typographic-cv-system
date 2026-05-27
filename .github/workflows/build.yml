@@ -16,7 +16,7 @@ jobs:
       - name: CV kompilieren
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: src/main.tex
+          root_file: src/cv.tex
           latexmk_use_xelatex: true
 
       - name: Vergleichsdokument kompilieren
@@ -33,5 +33,4 @@ jobs:
         with:
           name: generated-pdfs
           path: |
-            src/*.pdf
-            docs/*.pdf
+            build/*.pdf

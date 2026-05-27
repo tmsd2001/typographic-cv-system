@@ -17,11 +17,13 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: src/main.tex
+          latexmk_use_xelatex: true
 
       - name: Vergleichsdokument kompilieren
         uses: xu-cheng/latex-action@v3
         with:
           root_file: docs/document-comparison.tex
+          latexmk_use_xelatex: true
 
       - name: PDFs hochladen
         uses: actions/upload-artifact@v4

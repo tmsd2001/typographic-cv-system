@@ -24,7 +24,10 @@ jobs:
         with:
           root_file: docs/document-comparison.tex
           latexmk_use_xelatex: true
-
+          
+      - name: Dateien anzeigen
+        run: find . -name "*.pdf"
+        
       - name: PDFs hochladen
         uses: actions/upload-artifact@v4
         with:

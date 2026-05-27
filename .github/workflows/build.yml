@@ -12,36 +12,23 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
-        
-      - name: Repository Inhalt anzeigen
-        run: |
-          pwd
-          find .
           
       - name: CV kompilieren
         uses: xu-cheng/latex-action@v3
         with:
           root_file: src/cv.tex
           latexmk_use_xelatex: true
+          args: -output-directory=build
 
       - name: Vergleichsdokument kompilieren
         uses: xu-cheng/latex-action@v3
         with:
           root_file: docs/document-comparison.tex
           latexmk_use_xelatex: true
+          args: -output-directory=build 
           
-      - name: Dateien anzeigen
-        run: find . -name "*.pdf"
-        
       - name: PDFs hochladen
         uses: actions/upload-artifact@v4
         with:
           name: generated-pdfs
-          path: |
-            build/*.pdf
-                  
-      - name: Debug Dateien
-        run: |
-          pwd
-          ls -la
-          find . -name "*.pdf"
+          path: build/*.pdf

@@ -39,3 +39,8 @@ jobs:
           name: generated-pdfs
           path: |
             build/*.pdf
+                  
+      - name: PDFs nach build verschieben
+        run: |
+          mkdir -p build
+          mv *.pdf build/

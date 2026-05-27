@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{longtable}
+
+% =========================
+% Schriftarten
+% =========================
+
+\setmainfont{Inter}
+
+\newfontfamily\headingfont{Montserrat SemiBold}
+
+% =========================
+% Farben
+% =========================
+
+\definecolor{neutralgood}{HTML}{3A6B4B}
+\definecolor{neutralmid}{HTML}{8A6F2A}
+\definecolor{neutraltext}{HTML}{444444}
+
+\newcommand{\good}[1]{\textcolor{neutralgood}{#1}}
+\newcommand{\neutralwarn}[1]{\textcolor{neutralmid}{#1}}
+\newcommand{\neutral}[1]{\textcolor{neutraltext}{#1}}
+
+% =========================
+% Überschriften
+% =========================
+
+\titleformat{\section}
+{\headingfont\fontsize{15pt}{17pt}\selectfont}
+{}{0pt}{}
+
+\pagenumbering{gobble}
+
+% =========================
+% Dokument
+% =========================
+
+\begin{document}
+
+{\headingfont\fontsize{20pt}{22pt}\selectfont
+LaTeX im Vergleich zu klassischen Textverarbeitungen
+}
+
+\vspace{0.4cm}
+
+Schwerpunkt: Typografie, Dokumentstruktur und reproduzierbare Dokumenterstellung
+
+\vspace{0.8cm}
+
+\section*{Einordnung}
+
+Dieses Dokument vergleicht LaTeX mit klassischen Textverarbeitungen im Kontext strukturierter technischer Dokumente.
+
+Der Fokus liegt weniger auf einer allgemeinen Bewertung einzelner Werkzeuge, sondern auf den unterschiedlichen Ansätzen bei:
+
+\begin{itemize}
+\item Typografie
+\item Strukturierung
+\item Reproduzierbarkeit
+\item Versionskontrolle
+\item Wartbarkeit
+\item Automatisierung
+\end{itemize}
+
+\section*{Vergleich ausgewählter Eigenschaften}
+
+\renewcommand{\arraystretch}{1.35}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{5.5cm} >{\raggedright\arraybackslash}p{4.3cm} >{\raggedright\arraybackslash}p{4.3cm}}
+
+\toprule
+\textbf{Eigenschaft} & \textbf{LaTeX} & \textbf{Klassische Textverarbeitung} \\
+\midrule
+\endhead
+
+Typografische Konsistenz & \good{Sehr hoch} & \neutralwarn{Abhängig von Vorlage und Arbeitsweise} \\
+
+Trennung von Inhalt und Layout & \good{Konsequent strukturiert} & \neutralwarn{Oft vermischt} \\
+
+Versionierung mit Git & \good{Sehr gut geeignet} & \neutralwarn{Eingeschränkt praktikabel} \\
+
+Reproduzierbare Ausgabe & \good{Deterministische PDF Erzeugung} & \neutralwarn{Teilweise systemabhängig} \\
+
+Automatisierung & \good{Sehr gut integrierbar} & \neutralwarn{Teilweise möglich} \\
+
+Große Dokumente & \good{Sehr stabil} & \neutralwarn{Abhängig von Struktur und Umfang} \\
+
+Mikrotypografie & \good{Direkt integrierbar} & \neutralwarn{Teilweise verfügbar} \\
+
+Semantische Strukturierung & \good{Zentraler Bestandteil} & \neutralwarn{Oft visuell statt strukturell} \\
+
+Wiederverwendbarkeit von Inhalten & \good{Modular möglich} & \neutralwarn{Eher manuell} \\
+
+Layoutkontrolle & \good{Sehr präzise} & \neutralwarn{Visuell orientiert} \\
+
+Einarbeitungszeit & \neutralwarn{Höher} & \good{Niedrige Einstiegshürde} \\
+
+Spontane visuelle Bearbeitung & \neutralwarn{Weniger direkt} & \good{Sehr komfortabel} \\
+
+\bottomrule
+
+\end{longtable}
+
+\section*{Typografische Beispiele}
+
+\section*{Dokumentenstruktur und Wartbarkeit}
+
+Ein wesentlicher Unterschied liegt nicht nur im finalen Erscheinungsbild, sondern in der Struktur des Dokumentes.
+
+LaTeX eignet sich besonders für:
+
+\begin{itemize}
+\item reproduzierbare Dokumentgenerierung
+\item Versionskontrolle mit Git
+\item modulare Dokumentstrukturen
+\item automatisierte PDF Builds
+\item langfristig wartbare Dokumente
+\item Trennung von Inhalt und Gestaltung
+\end{itemize}
+
+Dadurch entsteht ein Workflow, der eher mit Softwareentwicklung oder technischer Dokumentation vergleichbar ist als mit klassischer visueller Textbearbeitung.
+
+\section*{Fazit}
+
+LaTeX und klassische Textverarbeitungen verfolgen unterschiedliche Ansätze.
+
+Klassische Textverarbeitungen bieten Vorteile bei schneller visueller Bearbeitung und geringer Einstiegshürde.
+
+LaTeX zeigt seine Stärken besonders bei:
+
+\begin{itemize}
+\item typografischer Konsistenz
+\item strukturierten Dokumenten
+\item reproduzierbaren Ergebnissen
+\item Automatisierung
+\item und langfristiger Wartbarkeit
+\end{itemize}
+
+Die Wahl des geeigneten Werkzeugs hängt letztlich vom jeweiligen Einsatzzweck, der Dokumentkomplexität und dem gewünschten Workflow ab.
+
+\end{document}
+```
+
+Wichtige Änderungen gegenüber der ursprünglichen Version:
+
+* Neutralere Sprache statt absoluter Bewertungen.
+* Weniger konfrontative Farbgebung.
+* Fokus auf Struktur und Reproduzierbarkeit statt nur auf „bessere Typografie“.
+* Ergänzung von Git, Automatisierung und Wartbarkeit.
+* Professionellere Bezeichnung „Klassische Textverarbeitung“.
+* Stärkere Einordnung als technischer Workflow statt Werkzeugvergleich.
+* Differenzierteres Fazit ohne Gewinner Verlierer Darstellung.

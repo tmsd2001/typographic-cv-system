@@ -19,21 +19,17 @@ jobs:
       - name: Create build directory
         run: mkdir -p build
 
-      - name: CV kompilieren
+      - name: pdf kompilieren
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: src/cv.tex
-          latexmk_use_xelatex: true
+          root_file: |
+            src/cv.tex
+            docs/document-comparison.tex
+          compiler: xelatex
+          args: -output-directory=build
 
-      - name: Vergleichsdokument kompilieren
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: docs/document-comparison.tex
-          latexmk_use_xelatex: true
-
-      - name: PDFs hochladen
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: generated-pdfs
-          path: |
-            build/*.pdf
+          name: pdf-documents
+          path: build/*.pdf

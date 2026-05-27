@@ -40,7 +40,8 @@ jobs:
           path: |
             build/*.pdf
                   
-      - name: PDFs nach build verschieben
+      - name: Debug Dateien
         run: |
-          mkdir -p build
-          mv *.pdf build/
+          pwd
+          ls -la
+          find . -name "*.pdf"
